@@ -19,4 +19,24 @@ The Basel II Accord enhances banking stability by enforcing stricter risk measur
 
 - **Operational Implementation:**
     - Banks and fintechs (e.g., online lenders) now design models with explainable outputs (e.g., "Strengths and Weaknesses Analysis") for faster, compliant decision-making.
-### 2. Proxy Variable Necessity and Risks
+### 2. Proxy Variables in Credit Scoring
+**Why Use a Proxy Variable?**
+- ***No Direct Default Data Available***: For MSMEs (Micro-, Small, and Medium-sized Enterprises), traditional loan default records are often missing. Alternative data (e.g., transaction history) may not include actual defaults.
+- ***Feasibility in Early Testing***: In proof-of-concept (POC) studies, proxies (e.g., late service payments) allow model development before real loan performance data exists.
+
+**Business Risks of Proxy-Based Predictions**
+
+***Accuracy Mismatch***:
+  - A proxy (e.g., late utility payments) may not perfectly predict actual loan defaults, leading to higher risk or missed opportunities.
+
+***Limited Model Scope***:
+  - Proxies may restrict models to "pre-screening" rather than true default prediction.
+
+***Data Quality & Bias Risks***:
+  - Poor proxy relevance can weaken model reliability.
+  - Proxies may introduce unintended bias (e.g., unfairly penalizing certain groups).
+
+***Regulatory & Trust Challenges***:
+  - Basel II requires transparent, interpretable models. Proxies complicate validation if their link to real risk is unclear.
+  - Lenders may distrust models based on non-intuitive proxies.
+
