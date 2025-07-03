@@ -1,0 +1,10 @@
+artifact_location: file:///d:/Research%20%26%20Project/10academy/week%205/Challenge/bati-bank-credit-risk-model/notebooks/mlruns/0/models/m-98d85480d7674670b56e0c09f4eefd62/artifacts
+creation_timestamp: 1751574993007
+experiment_id: '0'
+last_updated_timestamp: 1751574999684
+model_id: m-98d85480d7674670b56e0c09f4eefd62
+model_type: null
+name: model
+source_run_id: d3c42ce55fc54016a6782af4b5005452
+status: 2
+status_message: null
