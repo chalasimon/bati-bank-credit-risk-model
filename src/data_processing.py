@@ -2,6 +2,8 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 
 class FeatureEngineering:
     def __init__(self, df: pd.DataFrame):
@@ -63,6 +65,22 @@ class FeatureEngineering:
             df[col].fillna(df[col].mode()[0], inplace=True)
         
         return df
-    
-    
-        
+    def normalize_numerical_features(self, df):
+        self.df = df
+        # Normalize numerical features using Min-Max scaling
+        numerical_cols = ['Amount', 'total_transaction_amount', 'average_transaction_amount']
+        scaler = MinMaxScaler()
+        self.df[numerical_cols] = scaler.fit_transform(self.df[numerical_cols])
+        return self.df
+    def standardize_numerical_features(self, df):
+        # Standardize numerical features using StandardScaler
+        self.df = df
+        numerical_cols = ['Amount', 'total_transaction_amount', 'average_transaction_amount']
+        scaler = StandardScaler()
+        self.df[numerical_cols] = scaler.fit_transform(self.df[numerical_cols])
+        return self.df
+    def save_processed_data(self, df, output_file):
+        self.df = df
+        # Save the processed DataFrame to a CSV file
+        self.df.to_csv(output_file, index=False)
+        print(f"Processed data saved to {output_file}")
