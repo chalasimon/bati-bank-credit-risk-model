@@ -1,0 +1,22 @@
+artifact_path: file:///d:/Research%20%26%20Project/10academy/week%205/Challenge/bati-bank-credit-risk-model/notebooks/mlruns/0/models/m-98d85480d7674670b56e0c09f4eefd62/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.1
+model_id: m-98d85480d7674670b56e0c09f4eefd62
+model_size_bytes: 16770720
+model_uuid: m-98d85480d7674670b56e0c09f4eefd62
+prompts: null
+run_id: d3c42ce55fc54016a6782af4b5005452
+utc_time_created: '2025-07-03 20:36:33.177764'
